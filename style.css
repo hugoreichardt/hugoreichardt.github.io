@@ -29,6 +29,20 @@ a{
 }
 a:hover{ text-decoration: underline; }
 
+/* NEW: Desktop two-column layout */
+.layout{
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+.sidebar{
+  flex: 0 0 260px;
+}
+.content{
+  flex: 1;
+  min-width: 0;
+}
+
 /* Desktop header: image left, text right */
 .header{
   display: flex;
@@ -139,6 +153,22 @@ h3{
 /* Mobile: image centered above text */
 @media (max-width: 640px){
   body{ padding-top: 22px; }
+
+  /* NEW: stack the two columns on mobile */
+  .layout{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+  .sidebar{
+    flex: none;
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+    text-align: left;
+  }
 
   .header{
     flex-direction: column;
