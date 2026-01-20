@@ -2,22 +2,235 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hugo Reichardt</title>
+  <meta name="description" content="Hugo Reichardt — Junior Researcher at CREi; Affiliated Professor at BSE; Research Affiliate at CEPR." />
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 780px; margin: 48px auto; padding: 0 16px; line-height: 1.5; }
-    nav a { margin-right: 12px; }
+    :root{
+      --maxw: 780px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      padding:48px 18px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.55;
+      color:#111;
+      background:#fff;
+    }
+    a{ color:inherit; text-decoration:underline; text-underline-offset: 2px; }
+    a:hover{ opacity:.85; }
+    .wrap{ max-width: var(--maxw); margin:0 auto; }
+
+    header{
+      display:flex;
+      gap:22px;
+      align-items:flex-start;
+      justify-content:space-between;
+      margin-bottom: 24px;
+    }
+    .id{
+      flex: 1 1 auto;
+      min-width: 240px;
+    }
+    h1{
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .role{
+      margin: 0 0 10px 0;
+    }
+    .role div{ margin: 0; }
+    .meta{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+    }
+    .meta a{ text-decoration: none; border-bottom: 1px solid #111; padding-bottom: 1px; }
+    .meta a:hover{ opacity:.85; }
+
+    .portrait{
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      overflow:hidden;
+      flex: 0 0 auto;
+      border: 1px solid rgba(0,0,0,.12);
+      background: rgba(0,0,0,.03);
+    }
+    .portrait img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    nav{
+      margin: 18px 0 28px 0;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      text-decoration:none;
+      border-bottom: 1px solid rgba(0,0,0,.25);
+      padding-bottom: 2px;
+    }
+
+    section{ margin: 28px 0; }
+    h2{
+      font-size: 16px;
+      margin: 26px 0 10px 0;
+      font-weight: 700;
+      text-transform: none;
+    }
+    h3{
+      font-size: 14px;
+      margin: 18px 0 8px 0;
+      font-weight: 700;
+    }
+    p{ margin: 10px 0; }
+
+    .list{
+      margin: 8px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .item{
+      margin: 12px 0;
+    }
+    .title{
+      font-weight: 650;
+    }
+    .note{
+      display:block;
+      margin-top: 2px;
+    }
+    .links{
+      display:inline-flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-left: 6px;
+      font-weight: 500;
+    }
+    .links a{
+      text-decoration:none;
+      border-bottom: 1px solid rgba(0,0,0,.25);
+      padding-bottom: 1px;
+    }
+
+    footer{
+      margin-top: 44px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(0,0,0,.12);
+      font-size: 13px;
+      opacity: .85;
+    }
+
+    @media (max-width: 560px){
+      header{ flex-direction: column-reverse; }
+      .portrait{ width: 92px; height: 92px; }
+      body{ padding-top: 32px; }
+      h1{ font-size: 30px; }
+    }
   </style>
 </head>
-<body>
-  <h1>Hugo Reichardt</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/research.html">Research</a>
-    <a href="/teaching.html">Teaching</a>
-    <a href="/pdf/CV.pdf">CV (PDF)</a>
-  </nav>
 
-  <p>Welcome! This is my personal website hosted on GitHub Pages.</p>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="id">
+        <h1>Hugo Reichardt</h1>
+
+        <div class="role">
+          <div>I am a tenure-track Junior Researcher at the <a href="https://crei.cat/">Centre de Recerca en Economia Internacional</a> (CREi), an Affiliated Professor at the <a href="https://bse.eu/">Barcelona School of Economics</a> (BSE), and a Research Affiliate at the <a href="https://cepr.org/">Center for Economic Policy Research</a> (CEPR).</div>
+        </div>
+
+        <p>My main research interests are in macroeconomics and economic history.</p>
+        <p>I received a PhD in economics from LSE in 2024.</p>
+
+        <div class="meta" aria-label="quick links">
+          <a href="/pdf/CV.pdf">CV (PDF)</a>
+          <a href="mailto:hreichardt@crei.cat">hreichardt@crei.cat</a>
+          <a href="#research">Research</a>
+        </div>
+      </div>
+
+      <!-- Optional: put a file named profile.jpg next to index.html in your repo -->
+      <div class="portrait" title="Portrait">
+        <img src="profile.jpg" alt="Portrait of Hugo Reichardt" onerror="this.parentElement.style.display='none';" />
+      </div>
+    </header>
+
+    <nav>
+      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Home</a>
+      <a href="#research">Research</a>
+    </nav>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Working papers</h3>
+      <ul class="list">
+        <li class="item">
+          <span class="title">Task-Specific Technical Change and Comparative Advantage</span>
+          <span> (with <a href="https://www.lukasalthoff.com/">Lukas Althoff</a>)</span>
+          <span class="links">
+            <a href="/pdf/tstc_compadvantage.pdf">paper</a>
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="title">Scale-Biased Technical Change and Inequality</span>
+          <span class="links">
+            <a href="/pdf/reichardt_jmp.pdf">paper</a>
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="title">Mothers, Schools, and the Making of American Human Capital Mobility</span>
+          <span> (with <a href="https://www.lukasalthoff.com/">Lukas Althoff</a> and <a href="https://economics.yale.edu/people/harriet-brookes-gray">Harriet Brookes Gray</a>)</span>
+          <span class="note">Revise and resubmit, <em>Review of Economic Studies</em></span>
+          <span class="links">
+            <a href="/pdf/hc_mobility.pdf">paper</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3>Publications</h3>
+      <ul class="list">
+        <li class="item">
+          <span class="title">Jim Crow and Black Economic Progress After Slavery</span>
+          <span> (with <a href="https://www.lukasalthoff.com/">Lukas Althoff</a>)</span>
+          <span class="note"><em>Quarterly Journal of Economics</em>, 2024</span>
+          <span class="links">
+            <a href="/pdf/jimcrow_qje.pdf">paper</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3>Work in progress</h3>
+      <ul class="list">
+        <li class="item">
+          <span class="title">Why Are Firms More Productive in the US than in the EU?</span>
+          <span> (with <a href="https://www.r2rsquared.com/">Ricardo Reis</a>)</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Hugo Reichardt · Hosted on GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
