@@ -27,11 +27,32 @@
   <meta property="twitter:image" content="/portrait.jpg">
 
   <script>
-    function togglePanel(id) {
-      var x = document.getElementById(id);
-      if (!x) return;
-      x.style.display = (x.style.display === "block") ? "none" : "block";
+  function togglePanel(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Find the paper block this popup belongs to
+    const paper = el.closest('.paper');
+
+    // If we can't find the container, just fall back to simple toggle
+    if (!paper) {
+      el.style.display = (el.style.display === "block") ? "none" : "block";
+      return;
     }
+
+    // If the clicked one is already open, close it
+    const isOpen = (el.style.display === "block");
+    if (isOpen) {
+      el.style.display = "none";
+      return;
+    }
+
+    // Otherwise: close any other popups in this paper, then open this one
+    paper.querySelectorAll('.popup').forEach(p => {
+      p.style.display = "none";
+    });
+    el.style.display = "block";
+  }
   </script>
 </head>
 
