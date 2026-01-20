@@ -1,5 +1,5 @@
 :root{
-  --maxw: 920px;
+  --maxw: 860px;
   --text: #222;
   --muted: #666;
   --link: #1155cc;
@@ -29,36 +29,133 @@ a{
 }
 a:hover{ text-decoration: underline; }
 
-/* === Allan-style two-column page === */
-.layout{
-  display: grid;
-  grid-template-columns: 260px 1fr; /* sidebar then content */
-  gap: 36px;
-  align-items: start;
-}
-
-/* Left column */
-.sidebar{
-  /* Optional: keep sidebar visible while scrolling on desktop.
-     Remove these two lines if you don't want sticky behavior. */
-  position: sticky;
-  top: 24px;
+/* Desktop header: image left, text right */
+.header{
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
 }
 
 .portrait{
   display: block;
-  width: 230px;
-  max-width: 100%;
-  height: auto;
   border-radius: 2px;
+  max-width: 230px;
+  height: auto;
 }
 
 .name{
-  margin: 12px 0 10px 0;
+  margin: 0 0 10px 0;
   font-size: 34px;
   font-weight: 700;
   color: var(--text);
 }
 
 .affiliation{
-  margin: 0 0 10px
+  margin: 0 0 10px 0;
+}
+
+.contact{ margin: 0; }
+
+/* Email should look like normal text */
+.email{
+  color: var(--text);
+}
+.email:hover{ text-decoration: underline; }
+
+/* Section headings
+   Tweak header size here:
+   - Increase to 20px if you want slightly bigger
+   - Decrease to 18px if you want smaller
+*/
+h3{
+  margin: 22px 0 10px 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Paper blocks */
+.paper{
+  margin: 0 0 16px 0;
+}
+
+.paper-title{
+  margin: 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.paper-authors{
+  margin: 2px 0 0 0;
+  color: var(--text);
+}
+
+/* Coauthor links: clickable but NOT underlined */
+.paper-authors a{
+  color: inherit;
+  text-decoration: none;
+}
+.paper-authors a:hover{
+  text-decoration: underline; /* optional: change to none if you want no hover cue */
+}
+
+/* Journal/status line: same as body (not italic) */
+.paper-meta{
+  margin: 2px 0 0 0;
+  color: var(--text);
+  font-size: 16px;
+  font-style: normal;
+}
+
+/* Bracket links line */
+.buttonbar{
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Buttons */
+.button{
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--link);
+  cursor: pointer;
+}
+.button:hover{
+  text-decoration: underline;
+}
+
+/* Popups (abstract / media & awards) */
+.popup{
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-left: 2px solid #ddd;
+  color: var(--text);
+  background: #fafafa;
+}
+
+/* Mobile: image centered above text */
+@media (max-width: 640px){
+  body{ padding-top: 22px; }
+
+  .header{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .portrait{
+    max-width: 210px;
+  }
+
+  .name{
+    font-size: 30px;
+  }
+
+  main{
+    text-align: left;
+  }
+}
