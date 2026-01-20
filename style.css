@@ -7,7 +7,6 @@
 
 *{ box-sizing: border-box; }
 
-/* More “academic personal site” feel */
 body{
   margin: 0;
   padding: 32px 18px;
@@ -23,14 +22,14 @@ body{
   margin: 0 auto;
 }
 
-/* Links: default hugoreichardt blue */
+/* Links */
 a{
   color: var(--link);
   text-decoration: none;
 }
 a:hover{ text-decoration: underline; }
 
-/* Header layout: desktop = image left, text right */
+/* Desktop header: image left, text right */
 .header{
   display: flex;
   gap: 28px;
@@ -57,16 +56,20 @@ a:hover{ text-decoration: underline; }
 
 .contact{ margin: 0; }
 
-/* Email should look like normal text (not blue) */
+/* Email should look like normal text */
 .email{
   color: var(--text);
 }
 .email:hover{ text-decoration: underline; }
 
-/* Section headings */
+/* Section headings
+   Tweak header size here:
+   - Increase to 20px if you want slightly bigger
+   - Decrease to 18px if you want smaller
+*/
 h3{
   margin: 22px 0 10px 0;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
 }
 
@@ -77,8 +80,8 @@ h3{
 
 .paper-title{
   margin: 0;
-  font-weight: 700;     /* bold */
-  color: var(--text);   /* black */
+  font-weight: 700;
+  color: var(--text);
 }
 
 .paper-authors{
@@ -86,18 +89,16 @@ h3{
   color: var(--text);
 }
 
-/* Make author links inherit normal text styling (same font/color) but still clickable */
+/* Coauthor links: clickable but NOT underlined */
 .paper-authors a{
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 .paper-authors a:hover{
-  color: inherit;
-  opacity: 0.9;
+  text-decoration: underline; /* optional: change to none if you want no hover cue */
 }
 
-/* Journal/status line: same size/color as body, not italic */
+/* Journal/status line: same as body (not italic) */
 .paper-meta{
   margin: 2px 0 0 0;
   color: var(--text);
@@ -112,7 +113,7 @@ h3{
   font-size: 15px;
 }
 
-/* Button styling to match minimal academic sites */
+/* Buttons */
 .button{
   border: none;
   background: none;
@@ -126,7 +127,7 @@ h3{
   text-decoration: underline;
 }
 
-/* Abstract popup */
+/* Popups (abstract / media & awards) */
 .popup{
   margin-top: 8px;
   padding: 10px 12px;
