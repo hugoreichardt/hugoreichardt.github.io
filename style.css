@@ -180,7 +180,10 @@ h3{
 
   .portrait{
     max-width: 210px;
+    margin-left: auto;   
+    margin-right: auto; 
   }
+  
 
   .name{
     font-size: 30px;
