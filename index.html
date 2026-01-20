@@ -27,7 +27,7 @@
   <meta property="twitter:image" content="/portrait.jpg">
 
   <script>
-    function toggleAbstract(id) {
+    function togglePanel(id) {
       var x = document.getElementById(id);
       if (!x) return;
       x.style.display = (x.style.display === "block") ? "none" : "block";
@@ -72,44 +72,53 @@
         <div class="paper">
           <p class="paper-title">Task-Specific Technical Change and Comparative Advantage</p>
           <p class="paper-authors">
-            (with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a>)
+            with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a>
           </p>
           <div class="buttonbar">[
-            <button class="button" onclick="toggleAbstract('abs1')">abstract</button>
+            <button class="button" onclick="togglePanel('abs1')">abstract</button>
+            | <button class="button" onclick="togglePanel('med1')">media &amp; awards</button>
             | <a href="/pdf/tstc_compadvantage.pdf" target="_blank" rel="noopener">paper</a>
           ]</div>
           <div class="popup" id="abs1" style="display:none">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="popup" id="med1" style="display:none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
         </div>
 
         <div class="paper">
           <p class="paper-title">Scale-Biased Technical Change and Inequality</p>
           <div class="buttonbar">[
-            <button class="button" onclick="toggleAbstract('abs2')">abstract</button>
+            <button class="button" onclick="togglePanel('abs2')">abstract</button>
+            | <button class="button" onclick="togglePanel('med2')">media &amp; awards</button>
             | <a href="/pdf/scbtc_inequality.pdf" target="_blank" rel="noopener">paper</a>
           ]</div>
           <div class="popup" id="abs2" style="display:none">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="popup" id="med2" style="display:none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
         </div>
 
         <div class="paper">
           <p class="paper-title">Mothers, Schools, and the Making of American Human Capital Mobility</p>
           <p class="paper-authors">
-            (with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a> and
-            <a href="https://economics.yale.edu/people/harriet-brookes-gray" target="_blank" rel="noopener">Harriet Brookes Gray</a>)
+            with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a> and
+            <a href="https://economics.yale.edu/people/harriet-brookes-gray" target="_blank" rel="noopener">Harriet Brookes Gray</a>
           </p>
           <p class="paper-meta">Revise and resubmit, Review of Economic Studies</p>
           <div class="buttonbar">[
-            <button class="button" onclick="toggleAbstract('abs3')">abstract</button>
+            <button class="button" onclick="togglePanel('abs3')">abstract</button>
+            | <button class="button" onclick="togglePanel('med3')">media &amp; awards</button>
             | <a href="/pdf/hc_mobility.pdf" target="_blank" rel="noopener">paper</a>
           ]</div>
           <div class="popup" id="abs3" style="display:none">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="popup" id="med3" style="display:none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
         </div>
 
@@ -118,16 +127,19 @@
         <div class="paper">
           <p class="paper-title">Jim Crow and Black Economic Progress After Slavery</p>
           <p class="paper-authors">
-            (with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a>)
+            with <a href="https://www.lukasalthoff.com" target="_blank" rel="noopener">Lukas Althoff</a>
           </p>
           <p class="paper-meta">Quarterly Journal of Economics, 2024</p>
           <div class="buttonbar">[
-            <button class="button" onclick="toggleAbstract('abs4')">abstract</button>
+            <button class="button" onclick="togglePanel('abs4')">abstract</button>
+            | <button class="button" onclick="togglePanel('med4')">media &amp; awards</button>
             | <a href="/pdf/jimcrow_qje.pdf" target="_blank" rel="noopener">paper</a>
           ]</div>
           <div class="popup" id="abs4" style="display:none">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="popup" id="med4" style="display:none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
         </div>
 
@@ -136,7 +148,7 @@
         <div class="paper">
           <p class="paper-title">Why Are Firms More Productive in the US than in the EU?</p>
           <p class="paper-authors">
-            (with <a href="https://www.r2rsquared.com" target="_blank" rel="noopener">Ricardo Reis</a>)
+            with <a href="https://www.r2rsquared.com" target="_blank" rel="noopener">Ricardo Reis</a>
           </p>
         </div>
 
