@@ -55,6 +55,7 @@ a:hover{ text-decoration: underline; }
   border-radius: 2px;
   max-width: 230px;
   height: auto;
+  margin-bottom: 18px; 
 }
 
 .name{
