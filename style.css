@@ -84,9 +84,11 @@ a:hover{ text-decoration: underline; }
    - Decrease to 18px if you want smaller
 */
 h3{
-  margin: 22px 0 10px 0;
+  margin: 28px 0 14px 0;      /* a bit more breathing room */
+  padding-bottom: 6px;        /* space between text and line */
   font-size: 19px;
   font-weight: 700;
+  border-bottom: 1px solid #ddd; /* the divider line */
 }
 
 /* Paper blocks */
@@ -94,10 +96,13 @@ h3{
   margin: 0 0 16px 0;
 }
 
-.paper-title{
-  margin: 0;
-  font-weight: 700;
+.paper-title .paper-title-link{
   color: var(--text);
+  text-decoration: none;
+}
+
+.paper-title .paper-title-link:hover{
+  text-decoration: underline;
 }
 
 .paper-authors{
