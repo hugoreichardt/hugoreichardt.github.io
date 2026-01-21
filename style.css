@@ -96,10 +96,14 @@ h3{
   margin: 0 0 16px 0;
 }
 
-.paper-title .paper-title-link{
-  margin: 0; 
+.paper-title{
+  margin: 0;            
   font-weight: 700;
   color: var(--text);
+}
+
+.paper-title .paper-title-link{
+  color: inherit;
   text-decoration: none;
 }
 
