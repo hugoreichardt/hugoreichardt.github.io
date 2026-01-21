@@ -103,12 +103,11 @@ h3{
 
 .paper-title{
   margin: 0;            
-  font-weight: 700;
   color: var(--text);
 }
 
 .paper-title .paper-title-link{
-  color: inherit;
+  color: var(--link);
   text-decoration: none;
 }
 
