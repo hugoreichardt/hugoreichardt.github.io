@@ -80,6 +80,7 @@ a:hover{ text-decoration: underline; }
 
 .social{
   margin-top: 10px;
+  margin-bottom: 16px;
   display: flex;
   gap: 10px;
   align-items: center;          /* center icons vertically in the row */
@@ -256,6 +257,11 @@ h3{
   .content{
     width: 100%;
     text-align: left;
+  }
+
+  .social{
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .header{
