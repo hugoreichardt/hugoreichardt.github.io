@@ -27,31 +27,34 @@
   <meta property="twitter:image" content="/portrait.jpg">
 
   <script>
-  function togglePanel(id) {
+  function togglePanel(id, btn) {
     const el = document.getElementById(id);
     if (!el) return;
 
-    // Find the paper block this popup belongs to
     const paper = el.closest('.paper');
 
-    // If we can't find the container, just fall back to simple toggle
+    // fallback: if no paper container
     if (!paper) {
-      el.style.display = (el.style.display === "block") ? "none" : "block";
+      const isOpen = (el.style.display === "block");
+      el.style.display = isOpen ? "none" : "block";
+      if (btn) btn.setAttribute("aria-expanded", String(!isOpen));
       return;
     }
 
-    // If the clicked one is already open, close it
+    // Figure out if the clicked panel is currently open
     const isOpen = (el.style.display === "block");
-    if (isOpen) {
-      el.style.display = "none";
-      return;
-    }
 
-    // Otherwise: close any other popups in this paper, then open this one
-    paper.querySelectorAll('.popup').forEach(p => {
-      p.style.display = "none";
+    // Close all panels in this paper + reset all toggles
+    paper.querySelectorAll('.popup').forEach(p => p.style.display = "none");
+    paper.querySelectorAll('.toggle[aria-controls]').forEach(b => {
+      b.setAttribute("aria-expanded", "false");
     });
-    el.style.display = "block";
+
+    // If it was closed, open it and mark this toggle expanded
+    if (!isOpen) {
+      el.style.display = "block";
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    }
   }
   </script>
 </head>
