@@ -138,25 +138,58 @@ h3{
   font-style: italic;
 }
 
-/* Bracket links line */
+/* Controls row */
 .buttonbar{
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 15px;
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* Buttons */
-.button{
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
+/* Pill toggles */
+.toggle{
+  appearance: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
   font: inherit;
-  color: var(--link);
+  font-size: 14px;
+  color: var(--text);
   cursor: pointer;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.button:hover{
-  text-decoration: underline;
+
+/* Chevron indicator (closed) */
+.toggle::after{
+  content: "▾";
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Hover: minimal emphasis */
+.toggle:hover{
+  border-color: #ccc;
+}
+
+/* Keyboard focus */
+.toggle:focus-visible{
+  outline: 2px solid #cfe0ff;
+  outline-offset: 2px;
+}
+
+/* Expanded state */
+.toggle[aria-expanded="true"]{
+  background: #fafafa;
+  border-color: #bbb;
+}
+
+/* Chevron indicator (open) */
+.toggle[aria-expanded="true"]::after{
+  content: "▴";
 }
 
 /* Popups (abstract / media & awards) */
