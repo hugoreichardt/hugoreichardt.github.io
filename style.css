@@ -224,27 +224,17 @@ h3{
   background: #fafafa;
 }
 
-/* Desktop-only: keep left column still, scroll right column */
 @media (min-width: 641px){
-  /* Make the overall layout fill the viewport height */
-  .layout{
-    min-height: 100vh;
-  }
-
-  /* Left column stays in place */
   .sidebar{
     position: sticky;
-    top: 32px;                 /* matches body top padding on desktop */
+    top: 32px;          /* matches your desktop body padding-top */
     align-self: flex-start;
-    max-height: calc(100vh - 32px);
-    overflow: auto;            /* optional: if sidebar content ever exceeds viewport */
   }
 
-  /* Right column becomes the scrolling area */
+  /* IMPORTANT: ensure the right column is NOT its own scroller */
   .content{
-    max-height: calc(100vh - 32px);
-    overflow-y: auto;
-    padding-right: 6px;        /* optional: little breathing room for scrollbar */
+    overflow: visible;
+    max-height: none;
   }
 }
 
