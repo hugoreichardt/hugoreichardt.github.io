@@ -78,6 +78,29 @@ a:hover{ text-decoration: underline; }
 }
 .email:hover{ text-decoration: underline; }
 
+.social{
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-link{
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);       /* makes the X icon black */
+  text-decoration: none;
+}
+
+.icon{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
 /* Section headings
    Tweak header size here:
    - Increase to 20px if you want slightly bigger
