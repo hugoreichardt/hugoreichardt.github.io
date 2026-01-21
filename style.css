@@ -91,6 +91,11 @@ h3{
   border-bottom: 1px solid #ddd; /* the divider line */
 }
 
+/* No spacing before the first header */
+.content h3:first-of-type{
+  margin-top: 0;
+}
+
 /* Paper blocks */
 .paper{
   margin: 0 0 16px 0;
