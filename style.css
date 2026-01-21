@@ -166,7 +166,7 @@ h3{
 /* Chevron indicator (closed) */
 .toggle::after{
   content: "▾";
-  font-size: 12px;
+  font-size: 18px;
   color: var(--muted);
 }
 
