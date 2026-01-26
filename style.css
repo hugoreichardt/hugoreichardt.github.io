@@ -194,6 +194,11 @@ h3{
   color: var(--muted);
 }
 
+/* Chevron indicator (open) */
+.toggle[aria-expanded="true"]::after{
+  content: "▴";
+}
+
 /* Hover: minimal emphasis */
 .toggle:hover{
   border-color: #ccc;
@@ -211,10 +216,7 @@ h3{
   border-color: #bbb;
 }
 
-/* Chevron indicator (open) */
-.toggle[aria-expanded="true"]::after{
-  content: "▴";
-}
+
 
 /* Popups (abstract / media & awards) */
 .popup{
