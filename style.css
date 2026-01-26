@@ -187,16 +187,21 @@ h3{
   gap: 6px;
 }
 
-/* Chevron indicator (closed) */
+/* Chevron indicator (CSS-drawn) */
 .toggle::after{
-  content: "▾";
-  font-size: 18px;
-  color: var(--muted);
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);      /* down */
+  margin-left: 6px;
+  transition: transform 0.15s ease;
 }
 
 /* Chevron indicator (open) */
 .toggle[aria-expanded="true"]::after{
-  content: "▴";
+  transform: rotate(-135deg);    /* up */
 }
 
 /* Hover: minimal emphasis */
